@@ -1,1 +1,3 @@
 LOCAL_API_URL = "http://localhost:5000"
+
+FILE_NAME_STRING_LENGTH = 16
