@@ -34,9 +34,7 @@ class FileManagerController(Resource):
         file_path = os.path.join("./static", complete_file_name)
         file.save(file_path)
 
-        app_url = current_app.config.get("APP_URL")
-
-        return {"fileUrl": f"{app_url}/static/{complete_file_name}"}
+        return {"fileUrl": f"/static/{complete_file_name}"}
 
     @file_upload_namespace.expect(delete_file_fields)
     def delete(self):
